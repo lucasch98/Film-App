@@ -1,0 +1,20 @@
+.titlePage{
+  font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
+  font-size: 50px;
+  line-height: 1.1;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1.64px;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.spanTitle{
+  color: #a78BFa;
+  margin-right: 1%;
+}
+
+.filmIcon{
+  margin-right: 1%;
+}
