@@ -1,3 +1,19 @@
-.inputFilm{
-  padding-left: 1%;
+.inputFilm{ 
+  background-color: white;
+  width: 300px;
+  color: white;
+  border-color: lightgrey;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.searchButton{
+  border-radius: 25px;
 }
