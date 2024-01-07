@@ -1,11 +1,25 @@
 .inputFilm{ 
-  background-color: white;
+  background-color: black;
   width: 300px;
   color: white;
   border-color: lightgrey;
   border-radius: 25px;
   align-items: center;
   justify-content: center;
+  color: white;
+}
+
+.inputFilm:hover{
+  color: white;
+}
+
+.inputFilm:focus{
+  background-color: black;
+  color: white;
+}
+
+.inputFilm::placeholder{
+  color:white;
 }
 
 .inputContainer{
@@ -16,4 +30,6 @@
 }
 .searchButton{
   border-radius: 25px;
+  border-color: white;
 }
+
