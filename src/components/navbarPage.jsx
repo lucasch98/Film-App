@@ -9,7 +9,7 @@ const navbarPage = () => {
     <div className='navbarPage'>
       <Navbar data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home"><PiPopcornBold className='iconPopCornNavbar'/>FilmApp</Navbar.Brand>
+          <Navbar.Brand href="#home" className='homeNavbar'><PiPopcornBold className='iconPopCornNavbar'/>FilmApp</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#films">Films</Nav.Link>
             <Nav.Link href="#series">Series</Nav.Link>
