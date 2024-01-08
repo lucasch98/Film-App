@@ -7,7 +7,10 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import { FaCircle } from "react-icons/fa6";
-
+import { PiMedalFill } from "react-icons/pi";
+import Badge from 'react-bootstrap/Badge';
+import Stack from 'react-bootstrap/Stack';
+import { FaCalendarAlt } from "react-icons/fa";
 
 
 //API
@@ -30,6 +33,9 @@ function App() {
           throw new Error('Error en la solicitud a la API')
         }
         const dataFilm = await response.json()
+        if(dataFilm['results'].length === 0){
+          throw new Error('Error en la solicitud a la API')
+        }
         modalDataFilm(dataFilm)
       } catch (error) {
         setDataFilm(null);
@@ -38,9 +44,7 @@ function App() {
   }
  
   const modalDataFilm = (dataFilm) => {
-    //console.log("a");
     setShowModal(true);
-    console.log(dataFilm['results'][0]['original_title']);
     setDataFilm(dataFilm);
   }
 
@@ -54,17 +58,18 @@ function App() {
           <div className='modalFilm'>
             <Modal show={showModal} onHide={handleClose} size='lg'>
               <Modal.Header style={{backgroundColor: "black", color: "white"}}>
-                <Modal.Title style={{color: "#a78BFa"}}>{dataFilm['results'][0]['original_title']}</Modal.Title>
+                <h3 className='titleModal'>{dataFilm['results'][0]['original_title']}</h3>
               </Modal.Header>
               <Modal.Body style={{backgroundColor: "black", color: "white"}}>      
                 <ul>
-                  <div>
+                  <div style={{display: "flex"}}>
                     <img style={{width: "200px"}} src={`${API_IMG}${dataFilm['results'][0]['poster_path']}`}/>
-                    <h5 style={{color: "#a78BFa", marginLeft: "25px", fontFamily: "sans-serif", fontWeight: "bold"}}>{dataFilm['results'][0]['overview']}</h5>
+                      <h5><PiMedalFill style={{ color: "#a78BFa"}}/>{Math.floor(dataFilm['results'][0]['vote_average'])}</h5>
+                      <h5><FaCalendarAlt style={{color: "#a78BFa", marginLeft: "10px"}}/>{dataFilm['results'][0]['release_date']}</h5>
                   </div>
-                    <li>
-                      <h3>score: {Math.floor(dataFilm['results'][0]['vote_average'])}</h3>
-                    </li>
+                  <li>
+                    <h5 style={{color: "white", marginTop: "30px", marginLeft: "25px", fontFamily: "sans-serif", fontWeight: "bold"}}>{dataFilm['results'][0]['overview']}</h5>
+                  </li>
                 </ul>
               </Modal.Body>
               <Modal.Footer style={{backgroundColor: "black", color: "white"}}>

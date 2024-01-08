@@ -4,17 +4,9 @@
   text-align: center;
 }
 
-.modalDataFilm{
-  color: blue;
-  background-color: black;
-}
-
-.cardImg{
-  width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: top;
+.titleModal{
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
 }
