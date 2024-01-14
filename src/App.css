@@ -4,9 +4,20 @@
   text-align: center;
 }
 
-.titleModal{
+.titleModal {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.footerIndex {
+  border-top: solid;
+  padding: 5px;
+  font-size: 0.9em;
+  border-color: #a78BFa;
+  border-width: 1.5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

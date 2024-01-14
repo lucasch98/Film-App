@@ -11,11 +11,15 @@ import { FaFilm } from "react-icons/fa6";
 import { PiFilmSlateBold } from "react-icons/pi";
 
 
-//API
+//API TDB
 const API_KEY = '36f0395abc3500cf095451af07ed4080'
 const API_CALL_SEARCH = 'https://api.themoviedb.org/3/search/movie?query='
 const GENRE_URL = 'https://api.themoviedb.org/3/movie/'
 const API_IMG = 'https://image.tmdb.org/t/p/w300/'
+
+//API OMDB
+const API_KEY_OMDB = 'da253a7b'
+const API_CALL_OMDB_SEARCH = 'https://www.omdbapi.com/?t='
 //https://api.themoviedb.org/3/search/movie?query=Jack+Reacher&api_key=36f0395abc3500cf095451af07ed4080
 function App() {
   //MODAL
@@ -90,6 +94,9 @@ function App() {
           </div>
         )
       }
+      <footer className="footerIndex"> 
+        <p style={{color: "#a78BFa"}}>&copy; 2024 FilmApp</p>
+      </footer>
     </>
   )
 }
